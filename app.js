@@ -31,7 +31,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // connect mongodb
-mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.qectn.mongodb.net/userDB?retryWrites=true&w=majority`);
+mongoose.connect(process.env.URL);
 
 // create userSchema
 const userSchema = new mongoose.Schema({
